@@ -1,10 +1,12 @@
-var http = require('http');
+const http = require('http')
+const PORT = 8080
+
 
 http
   .createServer(function(req, res) {
-    res.write('Hello, Node.js!'); //write a response to the client
-    res.end(); //end the response
+    res.write('Hello, Node.js!') 
+    res.end() 
   })
-  .listen(8080); //the server object listens on port 8080
+  .listen(PORT) 
 
-console.log('Server running on port 8080');
+console.log('Server running on port ${PORT}')
